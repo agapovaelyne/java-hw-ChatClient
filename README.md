@@ -76,10 +76,6 @@ _Код и описание серверной части проекта мож�
 
 ![Chat Window](img/ChatWindow.png)
 
-<b>First message from user:</b>
-
-![First message](img/First message.png)
-
 <b>Chatting:</b>
 
 ![Chatting](img/Chatting.png)
