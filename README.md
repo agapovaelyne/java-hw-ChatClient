@@ -79,7 +79,9 @@ _Код и описание серверной части проекта мож�
 <b>Chatting:</b>
 
 ![Chatting](img/Chatting.png)
-                                  ↓
+
+↓
+
 ![Chatting2](img/Chatting2.png)
 
 <b name="exit">Exit Command:</b>
