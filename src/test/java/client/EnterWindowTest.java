@@ -14,8 +14,8 @@ public class EnterWindowTest {
     public void userEnters_test1() throws IOException {
         String username = "Test user";
         EnterWindow client = new EnterWindow();
-        client.nameInput.setText(username);
-        client.enterButton.doClick();
+        client.getNameInput().setText(username);
+        client.getEnterButton().doClick();
         assertFalse(client.isShowing());
         for (Window window : JFrame.getWindows()) {
             window.dispose();

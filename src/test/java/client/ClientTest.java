@@ -1,5 +1,6 @@
 package client;
 
+import client.config.Configuration;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ClientTest {
 
-    private static final String CONFIG = Client.CONFIG;
+    private static final String CONFIG = Configuration.CONFIG;
     private static final Properties PROPS = new Properties();
 
     //checks if user can connect to the server
@@ -32,11 +33,11 @@ public class ClientTest {
         String username = "Test user";
         Client client = new Client(username);
         client.exit();
-        assertEquals(client.name, username);
-        assertEquals(client.SERVER_HOST, Helper.getHost(PROPS, CONFIG));
-        assertEquals(client.SERVER_PORT, Helper.getPort(PROPS, CONFIG));
-        assertEquals(client.USERNAME_COMMAND, Helper.getUsernameCommandText(PROPS, CONFIG));
-        assertEquals(client.EXIT_COMMAND, Helper.getExitCommandText(PROPS, CONFIG));
+        assertEquals(client.getName(), username);
+        assertEquals(client.getServerHost(), Helper.getHost(PROPS, CONFIG));
+        assertEquals(client.getPort(), Helper.getPort(PROPS, CONFIG));
+        assertEquals(client.getUsernameCommand(), Helper.getUsernameCommandText(PROPS, CONFIG));
+        assertEquals(client.getExitCommand(), Helper.getExitCommandText(PROPS, CONFIG));
     }
 
     //checks if user's message has been sent to chat
